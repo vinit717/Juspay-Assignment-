@@ -1,9 +1,11 @@
+import Navbar from "./components/Navbar"
+
 function App() {
 
   return (
     <>
       <div>
-        <h1 className='text-4xl text-blue-500'>vinit</h1>
+        <Navbar/>
       </div>
     </>
   )
