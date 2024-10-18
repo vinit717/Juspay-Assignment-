@@ -1,4 +1,4 @@
-import { useState, useContext } from 'react';
+import { useContext } from 'react';
 import { ThemeContext } from '../../context/ThemeContext';
 import sidebarIcon from '../../assets/navbar/sidebarIcon.svg';
 import bookmarkIcon from '../../assets/navbar/bookmarkIcon.svg';
@@ -9,24 +9,30 @@ import sunIcon from '../../assets/navbar/sun.svg';
 import MenuBar from '../Sidebar';
 import NotificationBar from '../Notifications';
 
+interface NavbarProps {
+  isSidebarOpen: boolean;
+  setIsSidebarOpen: (open: boolean) => void;
+  isNotificationOpen: boolean;
+  setIsNotificationOpen: (open: boolean) => void;
+}
 
-
-const Navbar = () => {
+const Navbar = ({
+  isSidebarOpen,
+  setIsSidebarOpen,
+  isNotificationOpen,
+  setIsNotificationOpen,
+}: NavbarProps) => {
   const { theme, toggleTheme } = useContext(ThemeContext);
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
-  const [isNotificationOpen, setIsNotificationOpen] = useState(false);
 
-  const toggleSidebar = () => setIsSidebarOpen((prev) => !prev);
-  const toggleNotificationBar = () => setIsNotificationOpen((prev) => !prev);
+  const toggleSidebar = () => setIsSidebarOpen(!isSidebarOpen);
+  const toggleNotificationBar = () => setIsNotificationOpen(!isNotificationOpen);
 
   return (
     <div className="relative">
-    <div
+      <div
         className={`border-b border-black/10 dark:border-white/10 py-[22px] px-7 flex items-center justify-between transition-all ${
           isSidebarOpen ? 'ml-[212px]' : ''
-        } ${
-          isNotificationOpen ? 'mr-[280px]' : ''
-        }`}
+        } ${isNotificationOpen ? 'mr-[280px]' : ''}`}
       >
         <div className="flex items-center gap-2">
           <button
@@ -76,11 +82,11 @@ const Navbar = () => {
                 placeholder="Search..."
                 required
               />
-               <button type="button" className="absolute inset-y-0 right-0 flex items-center pr-2">
-              <svg aria-hidden="true" className="w-4 h-4 text-black/20 dark:text-white/20 hover:text-black dark:hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd"></path>
-              </svg>
-            </button>
+              <button type="button" className="absolute inset-y-0 right-0 flex items-center pr-2">
+                <svg aria-hidden="true" className="w-4 h-4 text-black/20 dark:text-white/20 hover:text-black dark:hover:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M7 4a3 3 0 016 0v4a3 3 0 11-6 0V4zm4 10.93A7.001 7.001 0 0017 8a1 1 0 10-2 0A5 5 0 015 8a1 1 0 00-2 0 7.001 7.001 0 006 6.93V17H6a1 1 0 100 2h8a1 1 0 100-2h-3v-2.07z" clipRule="evenodd"></path>
+                </svg>
+              </button>
             </div>
           </form>
           <div className="flex items-center gap-2">
