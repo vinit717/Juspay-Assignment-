@@ -7,6 +7,8 @@ darkMode: 'class',
     extend: {
       colors: {
         "custom-black": "#1a1a1a",
+        "custom-blue-1": "#e3f5ff",
+        "custom-blue-2": "#e5ecf6"
       }
     },
   },
