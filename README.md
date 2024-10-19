@@ -1,50 +1,80 @@
-# React + TypeScript + Vite
+# Sass Dashboard Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a simple **Sass Dashboard** web application built using **React**, **Tailwind CSS**, and **Ant Design (AntD)**. The application provides users with the ability to view and manage their orders through a responsive UI. The user can access the order list via the **Sidebar**, specifically under the **User Profile** menu.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Technologies Used](#technologies-used)
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Credits](#credits)
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: A JavaScript library for building user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for rapid UI development.
+- **Ant Design (AntD)**: A popular React UI framework with pre-built components like drawers, forms, and tables.
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+1. **Order List**: Users can view their orders in a table format by navigating through the sidebar.
+2. **Responsive Sidebar**: The sidebar is collapsible and can be opened or closed using an icon. The sidebar includes:
+   - User Profile Menu
+   - Order List navigation
+3. **Ant Design Drawer**: The sidebar uses an **Ant Design Drawer** for smooth and responsive toggling.
+4. **E-commerce Metrics Dashboard**: A default eCommerce dashboard displays various metrics related to sales and revenue, providing users with insights such as:
+   - Revenue
+   - Revenue by Location
+   - Total Sales
+   - Top Selling Products
+   - Projections vs Actuals
+5. **Dark Mode Support**: The application supports light and dark themes.
+6. **Tailwind CSS Styling**: The UI components are styled using Tailwind CSS for a consistent and responsive design.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Installation
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+To set up and run the project locally, follow these steps:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/vinit717/Juspay-Assignment-.git
+   cd juspay-assignment
+   ```
+
+2. Install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+The application should now be running on `http://localhost:5173`.
+
+## Usage
+
+1. **Sidebar Navigation**: The sidebar contains a **User Profile** section with a list item for accessing the order list.
+   
+   - **Accessing Order List**:
+     - Open the **Sidebar** by clicking on the sidebar icon.
+     - Under the **User Profile** section, click on the **Order List**.
+     - The order list page will be displayed.
+
+2. **Order List Page**: Once the order list is accessed, a list of orders is shown in a table format with order details.
+
+
+
+## Credits
+
+- **React**: [React Documentation](https://reactjs.org/)
+- **Tailwind CSS**: [Tailwind CSS Documentation](https://tailwindcss.com/docs)
+- **Ant Design**: [Ant Design Documentation](https://ant.design/docs/react/introduce)
+
+https://github.com/user-attachments/assets/554fd5fa-a511-4e8c-83db-41e10cff5c17
+

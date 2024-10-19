@@ -7,7 +7,6 @@ import MoonIcon from '../../assets/navbar/moon.svg?react';
 import SunIcon from '../../assets/navbar/sun.svg?react';
 import ClockIcon from '../../assets/navbar/clock.svg?react';
 import NotificationBar from '../Notifications';
-import MenuBar from '../Sidebar';
 import Search from './Search';
 
 interface NavbarProps {
@@ -15,7 +14,6 @@ interface NavbarProps {
   setIsSidebarOpen: (open: boolean) => void;
   isNotificationOpen: boolean;
   setIsNotificationOpen: (open: boolean) => void;
-  setShowClockComponent: (show: boolean) => void; 
 }
 
 const Navbar = ({
@@ -23,7 +21,6 @@ const Navbar = ({
   setIsSidebarOpen,
   isNotificationOpen,
   setIsNotificationOpen,
-  setShowClockComponent,
 }: NavbarProps) => {
   const { theme, toggleTheme } = useContext(ThemeContext);
 
@@ -48,13 +45,13 @@ const Navbar = ({
             <nav aria-label="breadcrumb" className="w-full py-1 px-2">
               <ol className="flex space-x-3">
                 <li className="flex items-center">
-                  <a href="/" className="flex items-center text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white">
+                  <a href="" className="flex items-center text-black/40 dark:text-white/40 hover:text-black dark:hover:text-white">
                     Dashboard
                   </a>
                 </li>
                 <li className="flex items-center space-x-1">
                   <span className="text-black/40 dark:text-white/40">/</span>
-                  <a href="/" className="flex items-center px-3 text-black dark:text-white">
+                  <a href="" className="flex items-center px-3 text-black dark:text-white">
                     Default
                   </a>
                 </li>
@@ -75,7 +72,6 @@ const Navbar = ({
             <button
               type="button"
               className="relative w-8 h-8 p-1 text-black dark:text-white cursor-pointer"
-              onClick={() => setShowClockComponent(true)}
             >
               <ClockIcon />
             </button>
@@ -85,16 +81,18 @@ const Navbar = ({
               className="relative w-7 h-7 p-1 text-black dark:text-white cursor-pointer"
             >
               <NotificationIcon />
-              <span className="flex absolute w-3 h-3 right-px top-[5px]">
-                <span className="animate-ping absolute -left-[3px] -top-[3px] inline-flex h-full w-full rounded-full bg-black/50 dark:bg-white/50 opacity-75"></span>
-                <span className="relative inline-flex rounded-full w-[6px] h-[6px] bg-black dark:bg-white"></span>
-              </span>
+              {!isNotificationOpen && (
+                <span className="flex absolute w-3 h-3 right-px top-[5px]">
+                  <span className="animate-ping absolute -left-[3px] -top-[3px] inline-flex h-full w-full rounded-full bg-black/50 dark:bg-white/50 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full w-[6px] h-[6px] bg-black dark:bg-white"></span>
+                </span>
+              )}
             </button>
           </div>
         </div>
       </div>
-      <MenuBar isOpen={isSidebarOpen} toggleMenu={toggleSidebar} />
-      <NotificationBar isOpen={isNotificationOpen} toggleNotification={toggleNotificationBar} />    </div>
+      <NotificationBar isOpen={isNotificationOpen} toggleNotification={toggleNotificationBar} />
+    </div>
   );
 };
 
