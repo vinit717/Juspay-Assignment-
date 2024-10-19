@@ -76,5 +76,6 @@ The application should now be running on `http://localhost:5173`.
 - **Tailwind CSS**: [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - **Ant Design**: [Ant Design Documentation](https://ant.design/docs/react/introduce)
 
-https://github.com/user-attachments/assets/554fd5fa-a511-4e8c-83db-41e10cff5c17
+
+https://github.com/user-attachments/assets/73bea29c-45d3-4df1-87c7-46989236401a
 
