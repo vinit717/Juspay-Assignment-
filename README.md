@@ -23,8 +23,14 @@ This is a simple **Sass Dashboard** web application built using **React**, **Tai
    - User Profile Menu
    - Order List navigation
 3. **Ant Design Drawer**: The sidebar uses an **Ant Design Drawer** for smooth and responsive toggling.
-4. **Dark Mode Support**: The application supports light and dark themes.
-5. **Tailwind CSS Styling**: The UI components are styled using Tailwind CSS for a consistent and responsive design.
+4. **E-commerce Metrics Dashboard**: A default eCommerce dashboard displays various metrics related to sales and revenue, providing users with insights such as:
+   - Revenue
+   - Revenue by Location
+   - Total Sales
+   - Top Selling Products
+   - Projections vs Actuals
+5. **Dark Mode Support**: The application supports light and dark themes.
+6. **Tailwind CSS Styling**: The UI components are styled using Tailwind CSS for a consistent and responsive design.
 
 ## Installation
 
@@ -46,7 +52,7 @@ To set up and run the project locally, follow these steps:
 3. Start the development server:
 
    ```bash
-   npm run start
+   npm run dev
    ```
 
 The application should now be running on `http://localhost:5173`.
