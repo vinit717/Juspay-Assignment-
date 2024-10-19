@@ -1,13 +1,23 @@
 import React, { useState } from 'react';
 import userprofile from "../../assets/sidebar/userProfile.svg";
-import defaulticon from "../../assets/sidebar/defaulticon.svg";
+import DefaultIcon from "../../assets/sidebar/defaulticon.svg?react"
+import ECommerceIcon from "../../assets/sidebar/ecommerce-icon.svg?react"
+import ProjectsIcon from "../../assets/sidebar/projects-icon.svg?react"
+import OnlineCousesIcon from "../../assets/sidebar/online-courses-icon.svg?react"
+import UserProfileIcon from "../../assets/sidebar/user-profile-icon.svg?react";
+import AccountIcon from "../../assets/sidebar/account-icon.svg?react";
+import CorporateIcon from "../../assets/sidebar/corporate-icon.svg?react"
+import BlogIcon from "../../assets/sidebar/blog-icon.svg?react";
+import SocialIcon from "../../assets/sidebar/social-icon.svg?react"
+import CircleIcon from "../../assets/sidebar/circle.svg?react"
 
 interface MenuBarProps {
   isOpen: boolean;
   toggleMenu: () => void;
+  setComponentToShow: (component: string) => void;
 }
 
-const MenuBar: React.FC<MenuBarProps> = ({ isOpen }) => {
+const MenuBar: React.FC<MenuBarProps> = ({ isOpen, setComponentToShow }) => {
   const [activeMenu, setActiveMenu] = useState<string | null>(null);
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null);
 
@@ -52,17 +62,15 @@ const MenuBar: React.FC<MenuBarProps> = ({ isOpen }) => {
       <ul className="relative h-[calc(100vh-58px)] flex flex-col gap-1 overflow-y-auto overflow-x-hidden p-2 py-0">
         <p className="pl-3 my-2 text-sm">
           <span className="text-black/40 dark:text-white/40 mr-4">Favourites</span>
-          <span className="text-black/20 ">Recently</span>
+          <span className="text-black/20 dark:text-white/20">Recently</span>
         </p>
 
         <li className="flex pl-3 py-2 hover:bg-black/5 relative cursor-pointer rounded-lg transition-all duration-300 w-[180px] h-7">
           <a
             href="#"
-            className="text-black dark:text-white flex items-center before:content-[''] before:absolute before:top-1.5 before:left-0 before:h-4 before:w-1 before:rounded before:bg-transparent hover:before:bg-black dark:hover:before:bg-white w-full"
+            className="text-black dark:text-white flex items-center before:content-[''] before:absolute before:top-1.5 before:left-0 before:h-4 before:w-1 before:rounded before:bg-transparent hover:before:bg-black dark:hover:before:bg-custom-blue-2 w-full"
           >
-            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 3C6 4.65685 4.65685 6 3 6C1.34315 6 0 4.65685 0 3C0 1.34315 1.34315 0 3 0C4.65685 0 6 1.34315 6 3Z" fill="#1C1C1C" fillOpacity="0.2" />
-            </svg>
+            <CircleIcon/>
             <span className="ml-2">Overview</span>
           </a>
         </li>
@@ -70,11 +78,9 @@ const MenuBar: React.FC<MenuBarProps> = ({ isOpen }) => {
         <li className="flex pl-3 py-2 hover:bg-black/5 relative cursor-pointer rounded-lg transition-all duration-300 w-[180px] h-7">
           <a
             href="#"
-            className="text-black dark:text-white flex items-center before:content-[''] before:absolute before:top-1.5 before:left-0 before:h-4 before:w-1 before:rounded before:bg-transparent hover:before:bg-black dark:hover:before:bg-white w-full"
+            className="text-black dark:text-white flex items-center before:content-[''] before:absolute before:top-1.5 before:left-0 before:h-4 before:w-1 before:rounded before:bg-transparent hover:before:bg-black dark:hover:before:bg-custom-blue-2 w-full"
           >
-            <svg width="6" height="6" viewBox="0 0 6 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 3C6 4.65685 4.65685 6 3 6C1.34315 6 0 4.65685 0 3C0 1.34315 1.34315 0 3 0C4.65685 0 6 1.34315 6 3Z" fill="#1C1C1C" fillOpacity="0.2" />
-            </svg>
+            <CircleIcon/>
             <span className="ml-2">Projects</span>
           </a>
         </li>
@@ -83,9 +89,9 @@ const MenuBar: React.FC<MenuBarProps> = ({ isOpen }) => {
         <li className="flex pl-3 py-2 hover:bg-black/5 relative cursor-pointer rounded-lg transition-all duration-300 w-[180px] h-7">
           <a
             href="#"
-            className="text-black dark:text-white flex items-center before:content-[''] before:absolute before:top-1.5 before:left-0 before:h-4 before:w-1 before:rounded before:bg-transparent hover:before:bg-black dark:hover:before:bg-white w-full"
+            className="text-black dark:text-white flex items-center before:content-[''] before:absolute before:top-1.5 before:left-0 before:h-4 before:w-1 before:rounded before:bg-transparent hover:before:bg-black dark:hover:before:bg-custom-blue-2 w-full ml-3.5"
           > 
-          <img src={defaulticon} alt='default icon'></img>
+          <DefaultIcon/>
             <span className="ml-2">Default</span>
           </a>
         </li>
@@ -96,6 +102,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ isOpen }) => {
           <div className="pl-3 text-black dark:text-white flex items-center justify-between rounded-lg hover:bg-black/5 h-7">
             <div className="flex items-center">
               <ArrowIcon isOpen={activeMenu === 'ecommerce'} />
+              <ECommerceIcon className='ml-2'/>
               <span className="ml-2">E-commerce</span>
             </div>
           </div>
@@ -107,6 +114,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ isOpen }) => {
           <div className="pl-3  text-black dark:text-white flex items-center justify-between rounded-lg hover:bg-black/5 h-7">
             <div className="flex items-center">
               <ArrowIcon isOpen={activeMenu === 'projects'} />
+              <ProjectsIcon className='ml-2'/>
               <span className="ml-2">Projects</span>
             </div>
           </div>
@@ -118,6 +126,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ isOpen }) => {
           <div className="pl-3 text-black dark:text-white flex items-center justify-between rounded-lg hover:bg-black/5 h-7">
             <div className="flex items-center">
               <ArrowIcon isOpen={activeMenu === 'onlineCourses'} />
+              <OnlineCousesIcon className='ml-2'/>
               <span className="ml-2">Online Courses</span>
             </div>
           </div>
@@ -126,66 +135,75 @@ const MenuBar: React.FC<MenuBarProps> = ({ isOpen }) => {
 
         <p className="pl-3 my-2 text-black/60 dark:text-white/40 text-sm">Pages</p>
         <li
-          className="py-2 relative cursor-pointer transition-all duration-300 w-[180px]"
+          className="relative cursor-pointer transition-all duration-300 w-[180px]"
           onClick={() => toggleSubmenuItem('user-profile')}
         >
           <div className="pl-3 text-black dark:text-white flex items-center justify-between rounded-lg hover:bg-black/5 h-7">
             <div className="flex items-center w-full">
               <ArrowIcon isOpen={activeSubmenu === 'user-profile'} />
+              <UserProfileIcon className='ml-2'/>
               <span className="ml-2">User Profile</span>
             </div>
           </div>
           {activeSubmenu === 'user-profile' && (
             <ul className='space-y-0.5'>
-                <li className="flex pl-3 py-2 hover:bg-black/5 relative cursor-pointer rounded-lg transition-all duration-300 w-[180px] h-7">
+                <li className="flex pl-11 py-2 hover:bg-black/5 relative cursor-pointer rounded-lg transition-all duration-300 w-[180px] h-7">
           <a
             href="#"
-            className="text-black dark:text-white flex items-center before:content-[''] before:absolute before:top-1.5 before:left-0 before:h-4 before:w-1 before:rounded before:bg-transparent hover:before:bg-black dark:hover:before:bg-white w-full"
+            className="text-black dark:text-white flex items-center before:content-[''] before:absolute before:top-1.5 before:left-0 before:h-4 before:w-1 before:rounded before:bg-transparent hover:before:bg-black dark:hover:before:bg-custom-blue-2 w-full"
           >
             <span className="ml-2">Overview</span>
           </a>
         </li>
-        <li className="flex pl-3 py-2 hover:bg-black/5 relative cursor-pointer rounded-lg transition-all duration-300 w-[180px] h-7">
+        <li className="flex pl-11 py-2 hover:bg-black/5 relative cursor-pointer rounded-lg transition-all duration-300 w-[180px] h-7">
           <a
             href="#"
-            className="text-black dark:text-white flex items-center before:content-[''] before:absolute before:top-1.5 before:left-0 before:h-4 before:w-1 before:rounded before:bg-transparent hover:before:bg-black dark:hover:before:bg-white w-full"
+            className="text-black dark:text-white flex items-center before:content-[''] before:absolute before:top-1.5 before:left-0 before:h-4 before:w-1 before:rounded before:bg-transparent hover:before:bg-black dark:hover:before:bg-custom-blue-2 w-full"
           >
             <span className="ml-2">Projects</span>
           </a>
         </li>
 
-        <li className="flex pl-3 py-2 hover:bg-black/5 relative cursor-pointer rounded-lg transition-all duration-300 w-[180px] h-7">
+        <li className="flex pl-11 py-2 hover:bg-black/5 relative cursor-pointer rounded-lg transition-all duration-300 w-[180px] h-7">
           <a
             href="#"
-            className="text-black dark:text-white flex items-center before:content-[''] before:absolute before:top-1.5 before:left-0 before:h-4 before:w-1 before:rounded before:bg-transparent hover:before:bg-black dark:hover:before:bg-white w-full"
+            className="text-black dark:text-white flex items-center before:content-[''] before:absolute before:top-1.5 before:left-0 before:h-4 before:w-1 before:rounded before:bg-transparent hover:before:bg-black dark:hover:before:bg-custom-blue-2 w-full"
           >
             <span className="ml-2">Campaigns</span>
           </a>
         </li>
 
-        <li className="flex pl-3 py-2 hover:bg-black/5 relative cursor-pointer rounded-lg transition-all duration-300 w-[180px] h-7">
+        <li className="flex pl-11 py-2 hover:bg-black/5 relative cursor-pointer rounded-lg transition-all duration-300 w-[180px] h-7">
           <a
             href="#"
-            className="text-black dark:text-white flex items-center before:content-[''] before:absolute before:top-1.5 before:left-0 before:h-4 before:w-1 before:rounded before:bg-transparent hover:before:bg-black dark:hover:before:bg-white w-full"
+            className="text-black dark:text-white flex items-center before:content-[''] before:absolute before:top-1.5 before:left-0 before:h-4 before:w-1 before:rounded before:bg-transparent hover:before:bg-black dark:hover:before:bg-custom-blue-2 w-full"
           >
             <span className="ml-2">Documents</span>
           </a>
         </li>
 
-        <li className="flex pl-3 py-2 hover:bg-black/5 relative cursor-pointer rounded-lg transition-all duration-300 w-[180px] h-7">
+        <li className="flex pl-11 py-2 hover:bg-black/5 relative cursor-pointer rounded-lg transition-all duration-300 w-[180px] h-7">
           <a
             href="#"
-            className="text-black dark:text-white flex items-center before:content-[''] before:absolute before:top-1.5 before:left-0 before:h-4 before:w-1 before:rounded before:bg-transparent hover:before:bg-black dark:hover:before:bg-white w-full"
+            className="text-black dark:text-white flex items-center before:content-[''] before:absolute before:top-1.5 before:left-0 before:h-4 before:w-1 before:rounded before:bg-transparent hover:before:bg-black dark:hover:before:bg-custom-blue-2 w-full"
           >
             <span className="ml-2">Followers</span>
           </a>
         </li>
 
-            </ul>
-          )}
+        <li className="flex pl-11 py-2 hover:bg-black/5 relative cursor-pointer rounded-lg transition-all duration-300 w-[180px] h-7">
+          <a
+            href="#"
+            className="text-black dark:text-white flex items-center before:content-[''] before:absolute before:top-1.5 before:left-0 before:h-4 before:w-1 before:rounded before:bg-transparent hover:before:bg-black dark:hover:before:bg-custom-blue-2 w-full"
+            onClick={() => setComponentToShow('OrderList')}
+          >
+            <span className="ml-2">Order List</span>
+          </a>
         </li>
 
-
+            </ul> 
+          )}
+        </li>
 
         <li
           className="relative cursor-pointer transition-all duration-300 w-[180px]"
@@ -194,6 +212,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ isOpen }) => {
           <div className="pl-3 text-black dark:text-white flex items-center justify-between rounded-lg hover:bg-black/5 h-7">
             <div className="flex items-center w-full">
               <ArrowIcon isOpen={activeSubmenu === 'account'} />
+              <AccountIcon className='ml-2'/>
               <span className="ml-2">Account</span>
             </div>
           </div>
@@ -208,6 +227,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ isOpen }) => {
           <div className="pl-3 text-black dark:text-white flex items-center justify-between rounded-lg hover:bg-black/5 h-7">
             <div className="flex items-center w-full">
               <ArrowIcon isOpen={activeSubmenu === 'corporate'} />
+              <CorporateIcon className='ml-2'/>
               <span className="ml-2">Corporate</span>
             </div>
           </div>
@@ -221,6 +241,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ isOpen }) => {
           <div className="pl-3 text-black dark:text-white flex items-center justify-between rounded-lg hover:bg-black/5 h-7">
             <div className="flex items-center w-full">
               <ArrowIcon isOpen={activeSubmenu === 'blog'} />
+              <BlogIcon className='ml-2'/>
               <span className="ml-2">Blog</span>
             </div>
           </div>
@@ -234,6 +255,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ isOpen }) => {
           <div className="pl-3 text-black dark:text-white flex items-center justify-between rounded-lg hover:bg-black/5 h-7">
             <div className="flex items-center w-full">
               <ArrowIcon isOpen={activeSubmenu === 'social'} />
+              <SocialIcon className='ml-2'/>
               <span className="ml-2">Social</span>
             </div>
           </div>
