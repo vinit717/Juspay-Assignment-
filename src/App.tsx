@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Default from "./components/default";
+import Default from "./components/Ecommerce";
 import Navbar from "./components/Navbar";
 import OrderList from "./components/order/OrderList";
 import MenuBar from "./components/Sidebar";

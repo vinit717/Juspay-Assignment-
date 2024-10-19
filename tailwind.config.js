@@ -12,7 +12,8 @@ darkMode: 'class',
         "lightwhite": "#f7f9fb",
         "lightblue-300": "#a8c5da",
         "custom-grey-1": "#1c1c1c66",
-        "custom-grey-2": "#fff6"
+        "custom-grey-2": "#fff6",
+        "custom-purple": "#c6c7f8"
       }
     },
   },

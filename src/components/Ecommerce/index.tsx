@@ -1,8 +1,10 @@
-import worldmap from "../../assets/ecommerce/world-map.svg";
-import taskchart from "../../assets/ecommerce/task-chart.svg";
-import revenuechart from "../../assets/ecommerce/revenue-chart.svg"
-import saleschart from "../../assets/ecommerce/sales-chart.svg";
-import salesvalue from "../../assets/ecommerce/sales-value.svg"
+import WorldMap from "../../assets/ecommerce/world-map.svg?react";
+import TaskChart from "../../assets/ecommerce/task-chart.svg?react";
+import RevenueChart from "../../assets/ecommerce/revenue-chart.svg?react"
+import SalesChart from "../../assets/ecommerce/sales-chart.svg?react";
+import SalesValue from "../../assets/ecommerce/sales-value.svg?react"
+import IncreaseChartIcon from "../../assets/ecommerce/increase-chart.svg?react"
+import DecreaseChartIcon from "../../assets/ecommerce/decrease-chart.svg?react"
 
 const Default = () => {
   return (
@@ -20,9 +22,8 @@ const Default = () => {
                                         <h2 className="text-2xl leading-9 font-semibold text-black">3781</h2>
                                         <div className="flex items-center gap-1">
                                             <p className="text-xs leading-[18px] text-black">+5.27%</p>
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.45488 5.60777L14 4L12.6198 9.6061L10.898 7.9532L8.12069 10.8463C8.02641 10.9445 7.89615 11 7.76 11C7.62385 11 7.49359 10.9445 7.39931 10.8463L5.36 8.72199L2.36069 11.8463C2.16946 12.0455 1.85294 12.0519 1.65373 11.8607C1.45453 11.6695 1.44807 11.3529 1.63931 11.1537L4.99931 7.65373C5.09359 7.55552 5.22385 7.5 5.36 7.5C5.49615 7.5 5.62641 7.55552 5.72069 7.65373L7.76 9.77801L10.1766 7.26067L8.45488 5.60777Z" fill="#1C1C1C"></path>
-                                            </svg>
+                                            <IncreaseChartIcon/>
+                                            
                                         </div>
                                     </div>
                                 </div>
@@ -32,9 +33,7 @@ const Default = () => {
                                         <h2 className="text-2xl leading-9 font-semibold text-black">3219</h2>
                                         <div className="flex items-center gap-1">
                                             <p className="text-xs leading-[18px] text-black">+1.75%</p>
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.45488 5.60777L14 4L12.6198 9.6061L10.898 7.9532L8.12069 10.8463C8.02641 10.9445 7.89615 11 7.76 11C7.62385 11 7.49359 10.9445 7.39931 10.8463L5.36 8.72199L2.36069 11.8463C2.16946 12.0455 1.85294 12.0519 1.65373 11.8607C1.45453 11.6695 1.44807 11.3529 1.63931 11.1537L4.99931 7.65373C5.09359 7.55552 5.22385 7.5 5.36 7.5C5.49615 7.5 5.62641 7.55552 5.72069 7.65373L7.76 9.77801L10.1766 7.26067L8.45488 5.60777Z" fill="#1C1C1C"></path>
-                                            </svg>
+                                            <IncreaseChartIcon/>
                                         </div>
                                     </div>
                                 </div>
@@ -44,9 +43,7 @@ const Default = () => {
                                         <h2 className="text-2xl leading-9 font-semibold text-black">$695</h2>
                                         <div className="flex items-center gap-1">
                                             <p className="text-xs leading-[18px] text-black">-0.56%</p>
-                                            <svg width="16" height="16" className="rotate-180" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.45488 5.60777L14 4L12.6198 9.6061L10.898 7.9532L8.12069 10.8463C8.02641 10.9445 7.89615 11 7.76 11C7.62385 11 7.49359 10.9445 7.39931 10.8463L5.36 8.72199L2.36069 11.8463C2.16946 12.0455 1.85294 12.0519 1.65373 11.8607C1.45453 11.6695 1.44807 11.3529 1.63931 11.1537L4.99931 7.65373C5.09359 7.55552 5.22385 7.5 5.36 7.5C5.49615 7.5 5.62641 7.55552 5.72069 7.65373L7.76 9.77801L10.1766 7.26067L8.45488 5.60777Z" fill="#1C1C1C"></path>
-                                            </svg>
+                                            <DecreaseChartIcon/>
                                         </div>
                                     </div>
                                 </div>
@@ -56,16 +53,17 @@ const Default = () => {
                                         <h2 className="text-2xl leading-9 font-semibold text-black">30.1%</h2>
                                         <div className="flex items-center gap-1">
                                             <p className="text-xs leading-[18px] text-black">+1.48%</p>
-                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M8.45488 5.60777L14 4L12.6198 9.6061L10.898 7.9532L8.12069 10.8463C8.02641 10.9445 7.89615 11 7.76 11C7.62385 11 7.49359 10.9445 7.39931 10.8463L5.36 8.72199L2.36069 11.8463C2.16946 12.0455 1.85294 12.0519 1.65373 11.8607C1.45453 11.6695 1.44807 11.3529 1.63931 11.1537L4.99931 7.65373C5.09359 7.55552 5.22385 7.5 5.36 7.5C5.49615 7.5 5.62641 7.55552 5.72069 7.65373L7.76 9.77801L10.1766 7.26067L8.45488 5.60777Z" fill="#1C1C1C"></path>
-                                            </svg>
+                                            <IncreaseChartIcon/>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div className="bg-lightwhite dark:bg-white/5 rounded-2xl p-6 w-full">
                                 <h2 className="text-sm font-semibold text-black dark:text-white mb-4">Projections vs Actuals</h2>
-                                <img src={taskchart} className="w-full"></img>
+                                <div className="text-black dark:text-white">
+
+                                <TaskChart className="w-full"/>
+                                </div>
                             </div>
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-4 gap-7">
@@ -76,7 +74,7 @@ const Default = () => {
                                             <p className="px-1.5 py-1 text-black dark:text-white font-semibold text-sm"><a href="">Revenue</a></p>
                                         </div>
                                         <p className="hidden md:block text-custom-grey-1 dark:text-white">|</p>
-                                        <div className="flex gap-8 items-center flex-none">
+                                        <div className="flex gap-8 items-center flex-none text-black dark:text-white">
                                             <div className="flex items-center text-xs">
                                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                     <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="currentColor"></path>
@@ -85,37 +83,26 @@ const Default = () => {
                                             </div>
                                             <div className="flex items-center text-xs">
                                                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="#A8C5DA"></path>
+                                                    <path d="M11 8C11 9.65685 9.65685 11 8 11C6.34315 11 5 9.65685 5 8C5 6.34315 6.34315 5 8 5C9.65685 5 11 6.34315 11 8Z" fill="currentcolor"></path>
                                                 </svg>
                                                 <p className="text-xs w-[140px] tracking-wide">Previous Week <span className="font-semibold">$68,768</span></p>
                                             </div>
                                         </div>
                                     </div>
-                                    {/* <div x-data="{ dropdown: false}" className="dropdown ml-auto">
-                                        <a href="javaScript:;" className="text-black dark:text-white">
-                                            <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M9 12.75C9.69036 12.75 10.25 13.3096 10.25 14C10.25 14.6904 9.69036 15.25 9 15.25C8.30964 15.25 7.75 14.6904 7.75 14C7.75 13.3096 8.30964 12.75 9 12.75Z" fill="currentColor"></path>
-                                                <path d="M14 12.75C14.6904 12.75 15.25 13.3096 15.25 14C15.25 14.6904 14.6904 15.25 14 15.25C13.3096 15.25 12.75 14.6904 12.75 14C12.75 13.3096 13.3096 12.75 14 12.75Z" fill="currentColor"></path>
-                                                <path d="M20.25 14C20.25 13.3096 19.6904 12.75 19 12.75C18.3096 12.75 17.75 13.3096 17.75 14C17.75 14.6904 18.3096 15.25 19 15.25C19.6904 15.25 20.25 14.6904 20.25 14Z" fill="currentColor"></path>
-                                            </svg>
-                                        </a>
-                                        <ul x-show="dropdown" className="right-0 whitespace-nowrap">
-                                            <li><a href="javascript:;">Weekly</a></li>
-                                            <li><a href="javascript:;">Monthly</a></li>
-                                            <li><a href="javascript:;">Yearly</a></li>
-                                        </ul>
-                                    </div> */}
                                     
                                 </div>
-                                <img src={revenuechart} className="w-full" alt="revenue chart"></img>
+                                <div className="text-black dark:text-white">
+                                <RevenueChart className="w-full"/>
+                                </div>
+                                
 
                             </div>
                             <div className="bg-lightwhite dark:bg-white/5 p-6 rounded-2xl">
                                 <h2 className="text-sm font-semibold text-black dark:text-white mb-4">Revenue by Location</h2>
-                                <img src={worldmap} className="w-full" alt="image" />
+                                <WorldMap className="w-full"/>
                                 <div className="flex flex-col gap-4">
                                     <div className="group">
-                                        <div className="flex items-center justify-between gap-2 text-xs">
+                                        <div className="flex items-center justify-between gap-2 text-xs text-black dark:text-white">
                                             <p>New York</p>
                                             <p>72K</p>
                                         </div>
@@ -125,7 +112,7 @@ const Default = () => {
                                         </div>
                                     </div>
                                     <div className="group">
-                                        <div className="flex items-center justify-between gap-2 text-xs">
+                                        <div className="flex items-center justify-between gap-2 text-xs text-black dark:text-white">
                                             <p>San Francisco</p>
                                             <p>39K</p>
                                         </div>
@@ -135,7 +122,7 @@ const Default = () => {
                                         </div>
                                     </div>
                                     <div className="group">
-                                        <div className="flex items-center justify-between gap-2 text-xs">
+                                        <div className="flex items-center justify-between gap-2 text-xs text-black dark:text-white">
                                             <p>Sydney</p>
                                             <p>25K</p>
                                         </div>
@@ -145,7 +132,7 @@ const Default = () => {
                                         </div>
                                     </div>
                                     <div className="group">
-                                        <div className="flex items-center justify-between gap-2 text-xs">
+                                        <div className="flex items-center justify-between gap-2 text-xs text-black dark:text-white">
                                             <p>Singapore</p>
                                             <p>61K</p>
                                         </div>
@@ -171,8 +158,8 @@ const Default = () => {
                                  </tr>
                                 </thead>
 
-                                        <tbody className="text-xs font-normal">
-                                            <tr className="h-10" >
+                                        <tbody className="text-xs font-normal text-black dark:text-white">
+                                            <tr className="h-10 " >
                                                 <td className="whitespace-nowrap">ASOS Ridley High Waist</td>
                                                 <td>$79.49</td>
                                                 <td>82</td>
@@ -215,8 +202,11 @@ const Default = () => {
                             <div className="bg-lightwhite dark:bg-white/5 p-6 rounded-2xl ">
                                 <h2 className="text-sm font-semibold text-black dark:text-white mb-4">Total Sales</h2>
                                 <div className="flex justify-center flex-col items-center	">
-                                <img src={saleschart} alt="sales chart" className="h-32	w-32"/>
-                                <img src={salesvalue} alt="sales value" className=" h-40 w-32"/>
+                                <SalesChart className="h-32	w-32"/>
+                                <div className="text-black dark:text-white">
+
+                                <SalesValue className=" h-40 w-32"/>
+                                </div>
                                 </div>
                             </div>
                         </div>
