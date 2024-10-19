@@ -5,6 +5,7 @@ import SalesChart from "../../assets/ecommerce/sales-chart.svg?react";
 import SalesValue from "../../assets/ecommerce/sales-value.svg?react"
 import IncreaseChartIcon from "../../assets/ecommerce/increase-chart.svg?react"
 import DecreaseChartIcon from "../../assets/ecommerce/decrease-chart.svg?react"
+import SalesValue1 from "../../assets/ecommerce/sales-value-1.svg?react"
 
 const Default = () => {
     return (
@@ -205,10 +206,11 @@ const Default = () => {
                                 </table>
                             </div>
                         </div>
-                        <div className="bg-lightwhite dark:bg-white/5 p-6 rounded-2xl ">
+                        <div className="bg-lightwhite dark:bg-white/5 p-6 rounded-2xl relative ">
                             <h2 className="text-sm font-semibold text-black dark:text-white mb-4">Total Sales</h2>
                             <div className="flex justify-center flex-col items-center	">
                                 <SalesChart className="h-32	w-32 cursor-pointer" />
+                                <SalesValue1 className="absolute top-36 left-16 cursor-pointer"/>
                                 <div className="text-black dark:text-white">
 
                                     <SalesValue className=" h-40 w-32" />
