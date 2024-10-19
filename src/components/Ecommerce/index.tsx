@@ -210,7 +210,7 @@ const Default = () => {
                             <h2 className="text-sm font-semibold text-black dark:text-white mb-4">Total Sales</h2>
                             <div className="flex justify-center flex-col items-center	">
                                 <SalesChart className="h-32	w-32 cursor-pointer" />
-                                <SalesValue1 className="absolute top-36 left-16"/>
+                                <SalesValue1 className="absolute top-36 left-16 cursor-pointer"/>
                                 <div className="text-black dark:text-white">
 
                                     <SalesValue className=" h-40 w-32" />
