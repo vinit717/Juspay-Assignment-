@@ -1,10 +1,13 @@
+import { useState } from "react";
 import Default from "./components/default";
 import Navbar from "./components/Navbar";
-import { useState } from "react";
+import OrderList from "./components/order/OrderList";
+
 
 function App() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
+  const [showClockComponent, setShowClockComponent] = useState(false);
 
   return (
     <div>
@@ -13,6 +16,7 @@ function App() {
         setIsSidebarOpen={setIsSidebarOpen}
         isNotificationOpen={isNotificationOpen}
         setIsNotificationOpen={setIsNotificationOpen}
+        setShowClockComponent={setShowClockComponent}
       />
       
       <div
@@ -20,7 +24,7 @@ function App() {
           isSidebarOpen ? "ml-[212px]" : "ml-0"
         } ${isNotificationOpen ? "mr-[280px]" : "mr-0"}`}
       >
-        <Default />
+        {showClockComponent ? <OrderList /> : <Default />} 
       </div>
     </div>
   );

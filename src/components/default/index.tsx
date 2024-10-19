@@ -214,7 +214,7 @@ const Default = () => {
                             </div>
                             <div className="bg-lightwhite dark:bg-white/5 p-6 rounded-2xl ">
                                 <h2 className="text-sm font-semibold text-black dark:text-white mb-4">Total Sales</h2>
-                                <div className="flex justify-center flex-col">
+                                <div className="flex justify-center flex-col items-center	">
                                 <img src={saleschart} alt="sales chart" className="h-32	w-32"/>
                                 <img src={salesvalue} alt="sales value" className=" h-40 w-32"/>
                                 </div>
