@@ -41,9 +41,9 @@ const OrderList = () => {
                     <div >
                         <table className="w-full">
                             <thead>
-                                <tr className="h-10	text-xs  text-custom-grey-1 dark:text-custom-grey-2 border-b border-black/20 dark:border-white/5 ">
+                                <tr className="h-10	text-xs  text-custom-grey-1 dark:text-custom-grey-2 border-b border-black/20 dark:border-white/5 text-left	">
                                     <th className="flex items-center pt-3">
-                                        <input id="all" name="remember-me" type="checkbox" className="h-3 w-3 rounded border border-black/20 text-black dark:bg-transparent dark:border-white/20 focus:ring-0 focus:ring-offset-0 focus:shadow-none focus:border-black/20 dark:focus:border-white/20 focus:outline-0 cursor-pointer" />
+                                        <input id="all" name="remember-me" type="checkbox" className="h-3 w-3 rounded-lg border-custom-grey-1 dark:border-custom-grey-2 accent-black checked:bg-black checked:text-white dark:accent-custom-blue-2 dark:checked:text-black cursor-pointer" />
                                         <label htmlFor="all" className="ml-1.5 font-normal">Order ID</label>
                                     </th>
                                     <th className="font-normal">User</th>

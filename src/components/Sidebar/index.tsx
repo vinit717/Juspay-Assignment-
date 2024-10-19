@@ -49,7 +49,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ isOpen, setComponentToShow }) => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 h-full w-[212px] bg-white dark:bg-black/10 shadow-lg transform ${
+      className={`fixed top-0 left-0 h-full w-[212px] shadow-lg transform ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       } ease-in-out z-40 flex-none border-r border-black/10 dark:border-white/10 transition-all duration-300`}
     >
@@ -103,7 +103,7 @@ const MenuBar: React.FC<MenuBarProps> = ({ isOpen, setComponentToShow }) => {
             <div className="flex items-center">
               <ArrowIcon isOpen={activeMenu === 'ecommerce'} />
               <ECommerceIcon className='ml-2'/>
-              <span className="ml-2">E-commerce</span>
+              <span className="ml-2">eCommerce</span>
             </div>
           </div>
         </li>
