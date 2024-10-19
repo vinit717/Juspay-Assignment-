@@ -81,15 +81,18 @@ const Navbar = ({
               className="relative w-7 h-7 p-1 text-black dark:text-white cursor-pointer"
             >
               <NotificationIcon />
-              <span className="flex absolute w-3 h-3 right-px top-[5px]">
-                <span className="animate-ping absolute -left-[3px] -top-[3px] inline-flex h-full w-full rounded-full bg-black/50 dark:bg-white/50 opacity-75"></span>
-                <span className="relative inline-flex rounded-full w-[6px] h-[6px] bg-black dark:bg-white"></span>
-              </span>
+              {!isNotificationOpen && (
+                <span className="flex absolute w-3 h-3 right-px top-[5px]">
+                  <span className="animate-ping absolute -left-[3px] -top-[3px] inline-flex h-full w-full rounded-full bg-black/50 dark:bg-white/50 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full w-[6px] h-[6px] bg-black dark:bg-white"></span>
+                </span>
+              )}
             </button>
           </div>
         </div>
       </div>
-      <NotificationBar isOpen={isNotificationOpen} toggleNotification={toggleNotificationBar} />    </div>
+      <NotificationBar isOpen={isNotificationOpen} toggleNotification={toggleNotificationBar} />
+    </div>
   );
 };
 
